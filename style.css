@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins%3Awght%40100%3B200%3B300%3B400%3B500%3B600&display=swap%27%29%3B');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    background-color:black;
+}
+
+header{
+    margin-top: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+
+}
+
+.logo{
+    font-size: xx-large;
+    color: white;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+}
+
+nav a{
+    font-size: large;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.1s ease;
+    border-bottom: 3px solid transparent 
+}
+
+nav a:hover,
+nav a.active{
+    color: orange;
+}
+
+section{
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+
+.home{
+    background-image: url("image/clouds.png");
+    min-height: 100vh;
+    width: 100%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9rem;
+    background-color: black;
+}
+
+.home .home-content h1{
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: white;
+}
+
+span{
+    color: white;
+}
+
+.home-content h3{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: white;
+}
+
+.home-content p{
+    font-size: 2rem;
+    color: white;
+}
+
+.home-img{
+    border-radius: 50%;
+}
+
+.home-img img{
+    position: relative;
+    width: 25vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px solid black;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.home-img img:hover{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    font-size: 3rem;
+    border-radius: 50%;
+    margin: 4rem 2rem 4rem 0;
+    transition: 50ms ease;
+    color: white;
+}
+
+.social-icons a:hover{
+    transform: scale(1.3) translateY(-5px);
+    color: orange;
+}
+
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: transparent;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: orange;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid orange;
+    transition: 0.3ms ease;
+    cursor: pointer;
+}
+
+.btn:hover{
+    transform: scale3d(1.03);
+    background-color: orange;
+    color: black;
+    box-shadow: 0 0 25px orange;
+}
+
+.typing-text{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.typing-text span{
+    position: relative;
+}
+
+.typing-text span::before{
+    content: "";
+    color: orange;
+    animation: words 20s infinite;
+}
+
+.typing-text span::after{
+    content: "";
+    background-color: transparent;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid white;
+    right: -8;
+    animation: cursor 1s infinite;
+}
+
+@keyframes cursor{
+    to{
+        border-left: 3px solid transparent;
+    }
+}
+
+@keyframes words{
+    0%, 20%{
+        content: "tech tinkerer";
+    }
+    21%, 40%{
+        content: "developer";
+    }
+    41%, 60%{
+        content: "student";
+    }
+    61%, 80%{
+        content: "nerd";
+    }
+    81%, 100%{
+        content: "geek";
+    } 
+}
+
+@media (max-width: 1000px){
+    .home{
+        gap: 9rem;
+    }
+}
+
+@media(max-width: 995px){
+    .home{
+        flex-direction: column;
+        margin: 0%;
+    }
+
+    .home .home-content h3{
+        font-size: 2.5rem;
+    }
+
+    .home-content h1{
+        font-size: 5rem;
+    }
+
+    .home-img img{
+        width: 75vw;
+        margin-top: 10rem;
+    }
+}
+
+.about{
+    background-image: url("image/anonymous.gif");
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: fill;
+    justify-content: normal;
+    align-items: start;
+    gap: 9rem;
+    background-color: black;
+}
+.about .about-content h1{
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: orange;
+    margin-bottom: 75px;
+    margin-top: auto;
+}
+.about-content p{
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 25px;
+    margin-top: auto;
+}
+
+.contact{
+    background-image: url("image/glancing_reverse.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: right;
+    align-items: start;
+    gap: 9rem;
+    background-color: black;
+}
+.contact .contact-content h1{
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: orange;
+    margin-bottom: 50px;
+    margin-top:auto
+}
+.contact-content p{
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 10px;
+    margin-top:auto;
+}
+
+.navigation-arrows {
+    position: fixed; 
+    right: 20px; 
+    bottom: 20px; 
+    z-index: 1000; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.navigation-arrows button {
+    background-color: transparent; 
+    border: none; 
+    cursor: pointer; 
+    padding: 5px; 
+    font-size: 2rem; 
+    color: white;
+    transition: 0.2s ease-in-out;
+    display: inline-flex;
+}
+
+.navigation-arrows button:hover {
+    color: orange;
+}
